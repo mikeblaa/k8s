@@ -14,7 +14,7 @@ OKD version: 4.5.0-0.okd-2020-10-15-235428
 
 | controlPlane:<br>replicas: | compute:<br>replicas: | mastersSchedulable: | controlPlane Memory | computer Memory | Result                        |
 |----------------------------|-----------------------|---------------------|---------------------|-----------------|-------------------------------|
-| 1                          | 0                     | true                | 8 GB                | N/A             | Console available in xxx mins |
+| 1                          | 0                     | true                | 8 GB                | N/A             | Bootstrap complete: 14m17s<br>Console available: Never comes up<br>Monitoring available: Never comes up|
 | 1                          | 0                     | true                | 12 GB               | N/A             | Bootstrap complete: 12m24s<br>Console available: 15m<br>Monitoring available: 15m|
 | 1                          | 0                     | true                | 16 GB               | N/A             | Bootstrap complete: 14m48s<br>Console available: 14m<br>Monitoring available: 15m |
 | 1                          | 2                     | false               | 8 GB                | 4 GB            | Console available in xxx mins |
