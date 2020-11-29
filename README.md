@@ -19,3 +19,12 @@ OKD version: 4.5.0-0.okd-2020-10-15-235428
 | 1                          | 0                     | true                | 16 GB               | N/A             | 14m48s         | True (14m)        | True (15m)           |
 | 1                          | 2                     | false               | 16 GB               | 4 GB            | 12m54s         | False             | False                |
 | 1                          | 2                     | false               | 16 GB               | 6 GB            |                |                   |                      |
+
+Some useful commands
+```
+openshift-install --dir=install_dir/ wait-for bootstrap-complete --log-level=info
+watch -d oc get clusteroperators
+watch -d oc get nodes
+oc get csr
+for i in $(oc get csr | awk '{ print $1 }'); do oc adm certificate approve $i; done;
+```
