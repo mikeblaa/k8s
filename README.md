@@ -6,6 +6,11 @@ With Red Hat OpenShift being a leading commercial Kubernetes distribution, I wan
 
 The primary constraint I have to work with is a limited amount of RAM. The server I intend to install OKD on has 32 GB of RAM. The guide, as written, calls for 8 seperate VMs with a total memory footprint of 101 GB! This forced me to adjust downward the number of VMs and the RAM assigned to each VM. I learned the OKD is very sensitive the amount of memory available. Through experimentation I determined the minimum amount of memory I could get away with. The table below captures the memory configurations that were successful and unsuccessful.
 
+Server Motherboard: Asus Maximus VII Hero LGA 1150 Intel Z97<br>
+Server Processor: Intel Core i7-4790 Haswell Quad-Core 3.6GHz<br>
+Server Memory: 32 GB<br>
+VMware ESXi version: 7.0.0<br>
+
 | controlPlane:<br>replicas: | compute:<br>replicas: | mastersSchedulable: | controlPlane Memory | computer Memory | Result |
 |----------------------------|-----------------------|---------------------|---------------------|-----------------|--------|
 | 1                          | 0                     | true                | 8 GB                | N/A             |        |
