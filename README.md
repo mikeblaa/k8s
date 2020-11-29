@@ -12,16 +12,19 @@ Server Memory: 32 GB<br>
 VMware ESXi version: 7.0.0<br>
 OKD version: 4.5.0-0.okd-2020-10-15-235428
 
-| controlPlane:<br>replicas: | compute:<br>replicas: | mastersSchedulable: | controlPlane Memory | computer Memory | Bootstrap Time | Console Available | Monitoring Available |
-|----------------------------|-----------------------|---------------------|---------------------|-----------------|----------------|-------------------|----------------------|
-| 1                          | 0                     | true                | 8 GB                | N/A             | 14m17s         | False             | False                |
-| 1                          | 0                     | true                | 12 GB               | N/A             | 12m24s         | True (15m)        | True (15m)           |
-| 1                          | 0                     | true                | 16 GB               | N/A             | 14m48s         | True (14m)        | True (15m)           |
-| 1                          | 2                     | false               | 16 GB               | 4 GB            | 12m54s         | False             | False                |
-| 1                          | 2                     | false               | 16 GB               | 6 GB            |                |                   |                      |
+| controlPlane:<br>replicas: | compute:<br>replicas: | mastersSchedulable: | controlPlane Memory | compute Memory | Bootstrap Time | Console Available | Monitoring Available |
+|----------------------------|-----------------------|---------------------|---------------------|----------------|----------------|-------------------|----------------------|
+| 1                          | 0                     | true                | 8 GB                | N/A            | 14m17s         | False             | False                |
+| 1                          | 0                     | true                | 12 GB               | N/A            | 12m24s         | True (15m)        | True (15m)           |
+| 1                          | 0                     | true                | 16 GB               | N/A            | 14m48s         | True (14m)        | True (15m)           |
+| 1                          | 1                     | false               | 16 GB               | 8 GB           |  9m57s         | True (13m)        | True (10m)           |
+| 1                          | 2                     | false               | 16 GB               | 8 GB           |                |                   |                      |
 
 Some useful commands
 ```
+coreos.inst.install_dev=/dev/sda coreos.inst.image_url=http://192.168.1.210:8080/okd4/fcos.raw.xz coreos.inst.ignition_url=http://192.168.1.210:8080/okd4/bootstrap.ign
+coreos.inst.install_dev=/dev/sda coreos.inst.image_url=http://192.168.1.210:8080/okd4/fcos.raw.xz coreos.inst.ignition_url=http://192.168.1.210:8080/okd4/master.ign
+coreos.inst.install_dev=/dev/sda coreos.inst.image_url=http://192.168.1.210:8080/okd4/fcos.raw.xz coreos.inst.ignition_url=http://192.168.1.210:8080/okd4/worker.ign
 openshift-install --dir=install_dir/ wait-for bootstrap-complete --log-level=info
 watch -d oc get clusteroperators
 watch -d oc get nodes
