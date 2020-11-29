@@ -10,12 +10,13 @@ Server Motherboard: Asus Maximus VII Hero LGA 1150 Intel Z97<br>
 Server Processor: Intel Core i7-4790 Haswell Quad-Core 3.6GHz<br>
 Server Memory: 32 GB<br>
 VMware ESXi version: 7.0.0<br>
+OKD version: 4.5.0-0.okd-2020-10-15-235428
 
-| controlPlane:<br>replicas: | compute:<br>replicas: | mastersSchedulable: | controlPlane Memory | computer Memory | Result |
-|----------------------------|-----------------------|---------------------|---------------------|-----------------|--------|
-| 1                          | 0                     | true                | 8 GB                | N/A             |        |
-| 1                          | 0                     | true                | 12 GB               | N/A             |        |
-| 1                          | 0                     | true                | 16 GB               | N/A             |        |
-| 1                          | 2                     | false               | 8 GB                | 4 GB            |        |
-| 1                          | 2                     | false               | 12 GB               | 4 GB            |        |
-| 1                          | 2                     | false               | 16 GB               | 4 GB            |        |
+| controlPlane:<br>replicas: | compute:<br>replicas: | mastersSchedulable: | controlPlane Memory | computer Memory | Result                        |
+|----------------------------|-----------------------|---------------------|---------------------|-----------------|-------------------------------|
+| 1                          | 0                     | true                | 8 GB                | N/A             | Console available in xxx mins |
+| 1                          | 0                     | true                | 12 GB               | N/A             | Console available in xxx mins |
+| 1                          | 0                     | true                | 16 GB               | N/A             | Console available in xxx mins |
+| 1                          | 2                     | false               | 8 GB                | 4 GB            | Console available in xxx mins |
+| 1                          | 2                     | false               | 12 GB               | 4 GB            | Console available in xxx mins |
+| 1                          | 2                     | false               | 16 GB               | 4 GB            | Console available in xxx mins |
