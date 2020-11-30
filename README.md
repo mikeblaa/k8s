@@ -18,7 +18,7 @@ OKD version: 4.5.0-0.okd-2020-10-15-235428
 | 1                          | 0                     | true                | 12 GB               | N/A            | 12m24s         | True (15m)        | True (15m)           |
 | 1                          | 0                     | true                | 16 GB               | N/A            | 14m48s         | True (14m)        | True (15m)           |
 | 1                          | 1                     | false               | 16 GB               | 8 GB           |  9m57s         | True (13m)        | True (10m)           |
-| 1                          | 2                     | false               | 16 GB               | 8 GB           |                |                   |                      |
+| 1                          | 2                     | false               | 16 GB               | 8 GB           |  xxx           | True              | True                 |
 
 Some useful commands
 ```
